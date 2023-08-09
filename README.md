@@ -1,4 +1,4 @@
-This is a code for automatically editing and updating the dataset that DLD provides
+code for automatically editing and updating the dataset that DLD provides
 
 # Requirements
 To install requirements, run the command below in your terminal
