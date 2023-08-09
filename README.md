@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
 # How to Use 
 For using code below without any security issue run simply this instructions:
-1. To work with API provided by DLD you must have Security and access keys include your keys in envorimental variables using folowing commands
+1. To work with API provided by DLD you must have Security and access keys include your keys. in envorimental variables using folowing commands
 ```bash
     export DUBAI_KEY=<YOUR KEY>
     export DUBAI_SEC=<YOUR SECURITY>
