@@ -19,7 +19,7 @@ To use the code below without any security issues run simply these instructions:
 3. Download your base dataset from this [LINK](https://www.dubaipulse.gov.ae/data/dld-transactions/dld_transactions-open) and place it in **Data** folder in ./src
 *note*: do not rename the dataset file
 
-4. Dataset provided by DLD has some structural issues. To solve them run the code provided in the csv_edit folder by using the below command
+4. Datasets provided by DLD has some structural issues. To solve them run the code provided in the csv_edit folder by using the below command
 ```bash
     python ./src/csv_edit/main.py
 ```
@@ -28,4 +28,6 @@ To use the code below without any security issues run simply these instructions:
 ```bash
     python ./src/API-call/main.py
 ```
+6. After running any of part 4 or 5 command you will get a massage to select with data set you want to do proccesses on it.Selcet it with valid entry
+
 the final file will be replaced in your **Data** folder
