@@ -6,19 +6,19 @@ from src.Data import DATA_DIR
 import json
 import datetime
 
-valid_inputs = [1, 2]
+valid_inputs = [1, 2, 3]
 
 while True:
     input_command = int(
         input(
-            "Please enter one of the mentioned number to access your desiered data:\n1 - DLD_transaction data\n2 - DLD_RENT_CONTRACTS data\n"
+            "Please enter one of the mentioned number to access your desiered data:\n1 - DLD_Transaction data\n2 - DLD_Rent_Contracts data\n3 - DLD_Units_Open\n"
         )
     )
     if input_command in valid_inputs:
         input_command = input_command - 1
         break
     else:
-        print("Error: Invalid number please try again")
+        logger.error("Error: Invalid number please try again")
 
 # Setting date parameters
 current_date = datetime.date.today()
@@ -28,7 +28,7 @@ two_days_ago = current_date - datetime.timedelta(days=2)
 # Loading old dataset for extracting parameters
 logger.info("Loading old dataset...")
 
-old_versions_list = ["Transactions.csv", "Rent_Contracts.csv"]
+old_versions_list = ["Transactions.csv", "Rent_Contracts.csv", "Units.csv"]
 current_data = pd.DataFrame()
 
 chunk_size = 1000000  # Adjust this value based on your system's memory capacity
@@ -81,8 +81,9 @@ if response.status_code == 200:
     url_list = [
         "https://api.dubaipulse.gov.ae/open/dld/dld_transactions-open-api",
         "https://api.dubaipulse.gov.ae/shared/dld/dld_rent_contracts-open-api",
+        "https://api.dubaipulse.gov.ae/open/dld/dld_units-open-api",
     ]
-    date_instance_list = ["instance_date", "contract_start_date"]
+    date_instance_list = ["instance_date", "contract_start_date", "creation_date"]
 
     # Continuously request until reach to the end of database
     while ~all_columns_empty:
@@ -93,7 +94,7 @@ if response.status_code == 200:
 
         parameters_to_api_query = {
             "order_by": date_instance_list[input_command],
-            "offset": num_data_rows - 500 + offset,
+            "offset": num_data_rows + offset,
         }
         # print(parameters_to_api_query)
         api_response = requests.get(
