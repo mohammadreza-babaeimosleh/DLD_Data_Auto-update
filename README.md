@@ -28,6 +28,6 @@ To use the code below without any security issues run simply these instructions:
 ```bash
     python ./src/API-call/main.py
 ```
-6. After running any of the part 4 or 5 commands you will get a massage to select with the dataset you want to do processes on it. Select it with a valid entry
+6. After running any of the part 4 or 5 commands you will get a massage to select the dataset you want to do processes on it. Select it using a valid entry
 
 the final file will be replaced in your **Data** folder
