@@ -17,7 +17,7 @@ To use the code below without any security issues run simply these instructions:
     export PYTHONPATH={PWD}
 ```
 3. Download your base dataset from this [LINK](https://www.dubaipulse.gov.ae/data/dld-transactions/dld_transactions-open) and place it in **Data** folder in ./src \
-&ensp; *note*: do not rename the dataset file
+&emsp; *note*: do not rename the dataset file
 
 4. Datasets provided by DLD have some structural issues. To solve them run the code provided in the csv_edit folder by using the below command
 ```bash
