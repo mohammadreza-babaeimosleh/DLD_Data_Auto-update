@@ -14,7 +14,7 @@ To use the code below without any security issues run simply these instructions:
 ```
 2. Run the command below in the current working directory
 ```bash
-    export PYTHONPATH={PWD}
+    export PYTHONPATH={$PWD}
 ```
 3. Download your base dataset from this [LINK](https://www.dubaipulse.gov.ae/data/dld-transactions/dld_transactions-open) and place it in **Data** folder in ./src \
 &emsp; *note*: do not rename the dataset file
